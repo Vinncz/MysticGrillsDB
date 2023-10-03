@@ -21,8 +21,8 @@ return new class extends Migration
             $table->unsignedBigInteger("user_id");
             // $table->unsignedBigInteger("item_id");
             $table->string("status");
-            $table->dateTime("date");
-            $table->double("total");
+            $table->dateTime("date")->useCurrent();
+            $table->double("total")->nullable();
 
             $table->foreign("user_id")->references("id")->on("users");
             // $table->foreign("item_id")->references("id")->on("menu_items");

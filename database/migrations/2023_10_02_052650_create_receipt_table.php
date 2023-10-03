@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->unsignedBigInteger("order_id");
             $table->double("payment_amount");
-            $table->dateTime("payment_date");
+            $table->dateTime("payment_date")->useCurrent();
             $table->string("payment_type");
 
             $table->foreign("order_id")->references("id")->on("orders");
