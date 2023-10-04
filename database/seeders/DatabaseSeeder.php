@@ -26,8 +26,8 @@ class DatabaseSeeder extends Seeder
 
         User::factory(10)->create();
         MenuItem::factory(10)->create();
-        OrderItem::factory(10)->create();
         Order::factory(10)->create();
+        OrderItem::factory(10)->create();
         Receipt::factory(10)->create();
     }
 }
