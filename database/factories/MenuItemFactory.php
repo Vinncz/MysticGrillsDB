@@ -16,8 +16,12 @@ class MenuItemFactory extends Factory
      */
     public function definition(): array
     {
+        // important: type the following in the terminal "composer require jzonta/faker-restaurant" without quotes.
+        $faker = \Faker\Factory::create();
+        $faker->addProvider(new \FakerRestaurant\Provider\en_US\Restaurant($faker));
+
         return [
-            'name' => fake()->name(),
+            'name' => $faker->foodName(),
             'description' => fake()->sentence($asText = true),
             'price' => fake()->numberBetween(),
         ];

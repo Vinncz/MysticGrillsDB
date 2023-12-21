@@ -17,7 +17,7 @@ class ReceiptFactory extends Factory
     public function definition(): array
     {
         return [
-            'order_id' => fake()->numberBetween(1, 10),
+            'order_id' => fake()->numberBetween(1, 25),
             'payment_amount' => fake()->numberBetween(3.99, 12.99),
             'payment_date' => now(),
             'payment_type' => fake()->randomElement(['CASH', 'DEBIT', 'CREDIT']),
